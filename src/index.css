@@ -3,27 +3,18 @@
 @tailwind utilities;
 
 .hero-bg {
-  position: relative;
-  background-image: url("/home.jpg");
+  background-image: linear-gradient(
+      rgba(255, 255, 255, 0) 60%,
+      #151623 90%,
+      #151623
+    ),
+    linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("/home.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   height: 100vh;
   width: 100%;
   display: flex;
-}
-
-.hero-bg::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(
-    0,
-    0,
-    0,
-    0.5
-  ); /* Adjust the alpha value to control the darkness */
+  align-items: center;
+  /* Add opacity to the background image */
 }
